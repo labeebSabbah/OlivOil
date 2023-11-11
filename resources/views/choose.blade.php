@@ -24,7 +24,7 @@
               <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-1">
                 
                 <div class="md:col-span-2">
-                    <h1 class="font-medium text-lg">مرحبا</h1>
+                    <h1 class="font-medium text-lg">1</h1>
                 </div>
 
                 <div class="md:col-span-2">
