@@ -76,7 +76,7 @@
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('orders') }}"
                             class="no-underline hover:underline text-blue-500 hover:text-blue-900">
                             <svg fill="#000000" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@
                                 </g>
                             </svg>
                         </a>
-                </li>
+                </li> --}}
                     <li>
                         <a href="{{ route('logout') }}"
                             class="no-underline hover:underline text-blue-500 hover:text-blue-900">
