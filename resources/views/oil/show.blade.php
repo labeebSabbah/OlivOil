@@ -21,8 +21,22 @@
         <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
           <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-1 !text-center">
             <div class="text-gray-600">
-              <p class="font-medium text-lg">تم تعبئة الطلب بنجاح بتاريخ {{ $order->created_at }}</p>
-              <p>سيتم التواصل معك قريبا ان شاء الله.</p>
+              <p class="font-medium text-lg">تم تأكيد الطلب بنجاح بتاريخ {{ $order->created_at }}</p>
+              <p>سيتم التواصل معك قريبا لابلاغك عن موعد الاستلام.</p>
+            </div>
+
+            <div class="lg:col-span-1">
+              <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-1">
+                
+                <div class="md:col-span-2">
+                    <h1 class="font-medium text-lg">الاسم</h1>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h1 class="font-bold text-2xl">{{ $order->name }}</h1>
+                </div>
+
+              </div>
             </div>
 
             <div class="lg:col-span-1">
@@ -34,16 +48,6 @@
 
                 <div class="md:col-span-2">
                     <h1 class="font-bold text-2xl">{{ $order->amount }}</h1>
-                </div>
-
-                <div class="md:col-span-2">
-                    <h1 class="font-medium text-lg">مكان الانتاج</h1>
-                </div>
-
-                <div class="md:col-span-2">
-                    <h1 class="font-bold text-2xl">
-                        {{ $order->location }}
-                    </h1>
                 </div>
 
               </div>

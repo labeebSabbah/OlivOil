@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string("phone", 10);
-            $table->string("work_location");
             $table->integer("amount");
-            $table->string("location");
             $table->date("created_at");
             $table->boolean('completed')->default(false);
         });

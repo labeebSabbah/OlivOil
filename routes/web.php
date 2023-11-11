@@ -40,8 +40,6 @@ Route::prefix("oil")->group(function () {
 Route::middleware("guest")->group(function () {
     Route::get("/login", [UserController::class, "index"])->name("login");
     Route::post("/login", [UserController::class, "login"])->name("login");
-    // Route::get("/register", [UserController::class, "create"])->name("register");
-    // Route::post("/register", [UserController::class, "register"])->name("register");
 });
 
 Route::middleware(["auth"])->prefix("admin")->group(function () {

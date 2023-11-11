@@ -56,7 +56,7 @@ class CreateRepository extends Command implements PromptsForMissingInput
         $arguments = [];
 
         if (! $this->argument('name')) {
-            $arguments['name'] = $this->ask('What is the name of the admin user?');
+            $arguments['name'] = $this->ask('What is the name of the repository?');
         }
 
         return $arguments;

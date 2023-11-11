@@ -33,14 +33,9 @@ class StoreOilRequest extends FormRequest
                 'unique:oil,phone',
                 new PhoneRule(),
             ],
-            'work_location' => 'required|string|max:255',
             "amount" => [
                 'required',
                 new AmountRule(),
-            ],
-            "location" => [
-                "required",
-                Rule::in(config('oil'))
             ]
         ];
     }

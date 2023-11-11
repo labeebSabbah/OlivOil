@@ -20,11 +20,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        User::create([
-            "username" => "admin",
-            "password" => bcrypt("nayef@123"),
-        ]);
     }
 
     /**

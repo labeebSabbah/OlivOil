@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>طلب جديد</title>
+  <title>تأكيد الطلب</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -22,7 +22,7 @@
         <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
           <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
             <div class="text-gray-600">
-              <p class="font-medium text-lg">طلب تنكة زيت</p>
+              <p class="font-medium text-lg">تأكيد طلب تنكة زيت</p>
               <p>الرجاء تعبئة النموذج الاتي كاملا.</p>
             </div>
 
@@ -51,17 +51,6 @@
                 </div>
 
                 <div class="md:col-span-5">
-                  <label for="work_location">مكان العمل</label>
-                  <input type="text" name="work_location" id="work_location"
-                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                    @error('work_location')
-                      @foreach ($errors->get('work_location') as $message)
-                        <div class="text-red-500">{{ $message }}</div>
-                      @endforeach
-                    @enderror
-                </div>
-
-                <div class="md:col-span-2">
                   <label for="amount">عدد التنكات المطلوب</label>
                   <input type="text" name="amount" id="amount" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                     value="" />
@@ -70,22 +59,6 @@
                           <div class="text-red-500">{{ $message }}</div>
                       @endforeach
                       @enderror
-                </div>
-
-                <div class="md:col-span-3">
-                  <label for="location">مكان الانتاج</label>
-                  <select name="location" id="location"
-                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
-                    <option selected>اختر مكان الانتاج</option>
-                    @foreach (config('oil') as $value)
-                    <option value="{{ $value }}">{{ $value }}</option>
-                    @endforeach
-                  </select>
-                  @error('location')
-                    @foreach ($errors->get('location') as $message)
-                      <div class="text-red-500">{{ $message }}</div>
-                    @endforeach
-                  @enderror
                 </div>
 
                 <div class="md:col-span-5 text-right mt-2">

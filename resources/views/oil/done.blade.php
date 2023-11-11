@@ -122,7 +122,6 @@
                                 <th data-priority="1">#</th>
                                 <th data-priority="2">الاسم</th>
                                 <th data-priority="3">عدد التنكات المطلوب</th>
-                                <th data-priority="4">مكان الانتاج</th>
                                 <th data-priority="5">الرقم التسلسلي</th>
                                 <th data-priority="6">تاريخ الطلب</th>
                                 <th data-priority="7">رقم الهاتف</th>
@@ -140,7 +139,6 @@
                                         <td>{{ $count++ }}</td>
                                         <td>{{ $order->name }}</td>
                                         <td>{{ $order->amount }}</td>
-                                        <td>{{ $order->location }}</td>
                                         <td>{{ $order->id }}</td>
                                         <td>{{ $order->created_at }}</td>
                                         <td><a class="no-underline hover:underline text-blue-500 hover:text-blue-900"
