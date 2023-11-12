@@ -27,10 +27,6 @@
                     <h1 class="font-medium text-lg">مرحبا</h1>
                 </div>
 
-                <div class="md:col-span-2">
-                    <h1 class="font-medium text-lg">اختار نوع الطلبية </h1>
-                </div>
-
                 <div class="md:col-span-2 mt-3">
                     {{-- <a href="{{ route("order.home") }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
                         طلب سلفة
