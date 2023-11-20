@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-// use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OilController;
 use App\Http\Controllers\UserController;
 
@@ -18,7 +18,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get("/", function() {
-    return view("choose");
+    return view("oil.busy");
 })->name("home");
 
 // Route::prefix("order")->group(function () {
@@ -29,13 +29,13 @@ Route::get("/", function() {
 //     Route::get("/search", [OrderController::class, "search"])->name("order.search");
 // });
 
-Route::prefix("oil")->group(function () {
-    // Route::get("/", [OilController::class, "busy"])->name("oil.home");
-    Route::get('/', [OilController::class, "create"])->name("oil.home");
-    Route::post("/store", [OilController::class, "store"])->name("oil.store");
-    Route::post("/show", [OilController::class, "show"])->name("oil.show");
-    Route::get("/search", [OilController::class, "search"])->name("oil.search");
-});
+// Route::prefix("oil")->group(function () {
+//     // Route::get("/", [OilController::class, "busy"])->name("oil.home");
+//     Route::get('/', [OilController::class, "create"])->name("oil.home");
+//     Route::post("/store", [OilController::class, "store"])->name("oil.store");
+//     Route::post("/show", [OilController::class, "show"])->name("oil.show");
+//     Route::get("/search", [OilController::class, "search"])->name("oil.search");
+// });
 
 Route::middleware("guest")->group(function () {
     Route::get("/login", [UserController::class, "index"])->name("login");
@@ -48,11 +48,11 @@ Route::middleware(["auth"])->prefix("admin")->group(function () {
         return redirect()->route("oil");
     })->name("admin");
 
-    // Route::prefix("orders")->group(function () {
-    //     Route::get("/", [OrderController::class, "index"])->name("orders");
-    //     Route::get("/done", [OrderController::class, "done"])->name("orders.done");
-    //     Route::put("/update/{id}", [OrderController::class, "update"])->name("orders.update");
-    // });
+    Route::prefix("orders")->group(function () {
+        Route::get("/", [OrderController::class, "index"])->name("orders");
+        Route::get("/done", [OrderController::class, "done"])->name("orders.done");
+        Route::put("/update/{id}", [OrderController::class, "update"])->name("orders.update");
+    });
 
     Route::prefix("oil")->group(function () {
         Route::get("/", [OilController::class, "index"])->name("oil");
